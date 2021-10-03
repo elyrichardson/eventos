@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="eventos")
@@ -15,12 +17,17 @@ public class Evento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	@Column(nullable = false,unique=true, length = 60)
 	private String nome;
+	@Column(nullable = false)
 	private int vagas;
-	@Column(name="data_ini")
+	@Column(name="data_ini", nullable = false)
+	@Temporal(TemporalType.DATE)
 	private Date dataIni;
-	@Column(name="data_fim")
+	@Column(name="data_fim", nullable = false)
+	@Temporal(TemporalType.DATE)
 	private Date dataFim;
+	
 	public long getId() {
 		return id;
 	}
