@@ -5,7 +5,7 @@ Aplicação parcialmente concluída, foi utilizado Sping Boot com MySQL para ger
 - Clone o repositório, edite o arquivo main/resources/application.properties com o usuário e senha da sua instância MySql;
 - Crie um banco de dados chamado eventos
 
-** Ao executar a primeira vez, o Spring Boot vai baixar todas as dependências do projeto e criar as tabelas Eventos e Usuários **
+**Ao executar a primeira vez, o Spring Boot vai baixar todas as dependências do projeto e criar as tabelas Eventos e Usuários**
 
 Execute as classes de teste EventoRepositoryTests e UsuarioRepositoryTests
 
